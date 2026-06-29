@@ -55,6 +55,22 @@ class HomeScreen extends StatelessWidget {
       icon: Icons.school,
       color: Colors.teal,
     ),
+    LinkModel(
+      title: 'Fluxo de Atendimento',
+      url: 'https://bd-nap.web.app/',
+      description: 'Plataforma para acompanhamento do fluxo de atendimento',
+      category: 'Atendimento',
+      icon: Icons.account_tree,
+      color: Colors.indigo,
+    ),
+    LinkModel(
+      title: 'Profissionais Externos',
+      url: 'https://md-externos.web.app',
+      description: 'Acesso destinado a profissionais externos',
+      category: 'Profissionais',
+      icon: Icons.groups,
+      color: Colors.brown,
+    ),
   ];
 
   @override
