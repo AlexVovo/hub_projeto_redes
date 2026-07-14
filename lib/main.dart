@@ -12,7 +12,7 @@ class ProjetoRedesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Projeto Redes',
+      title: 'Hub Redes',
       theme: ThemeData(primarySwatch: Colors.blueGrey, fontFamily: 'Roboto'),
       home: HomeScreen(),
     );

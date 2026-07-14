@@ -56,20 +56,38 @@ class HomeScreen extends StatelessWidget {
       color: Colors.teal,
     ),
     LinkModel(
-      title: 'Fluxo de Atendimento',
-      url: 'https://bd-nap.web.app/',
-      description: 'Plataforma para acompanhamento do fluxo de atendimento',
-      category: 'Atendimento',
-      icon: Icons.account_tree,
-      color: Colors.indigo,
-    ),
-    LinkModel(
       title: 'Profissionais Externos',
       url: 'https://md-externos.web.app',
       description: 'Acesso destinado a profissionais externos',
       category: 'Profissionais',
       icon: Icons.groups,
       color: Colors.brown,
+    ),
+    LinkModel(
+      title: 'Indicadores Painel Oncoped',
+      url: 'https://indicadorespaineloncoped.web.app/',
+      description: 'Painel de indicadores oncológicos pediátricos',
+      category: 'Dashboard',
+      icon: Icons.analytics,
+      color: Colors.cyan,
+    ),
+    LinkModel(
+      title: 'Link Artigos Projeto Redes',
+      url:
+          'https://drive.google.com/drive/folders/1vfgCS06849M3i-7LM8WeDGHqlMUprhaA?usp=sharing',
+      description: 'Pasta com artigos do Projeto Redes',
+      category: 'Documentos',
+      icon: Icons.article,
+      color: Colors.deepOrange,
+    ),
+    LinkModel(
+      title: 'Projeto Redes',
+      url:
+          'https://drive.google.com/drive/folders/1lbHNWlCcbA5QIqzQgsKcxRL4ceGh3fDJ?usp=sharing',
+      description: 'Pasta de documentos do Projeto Redes',
+      category: 'Documentos',
+      icon: Icons.folder_shared,
+      color: Colors.amber,
     ),
   ];
 
@@ -79,31 +97,91 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Projeto Redes'),
-        centerTitle: true,
+        toolbarHeight: 76,
+        elevation: 0,
+        foregroundColor: Colors.white,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF001840), Color(0xFF006C8F)],
+            ),
+          ),
+        ),
+        title: const Row(
+          children: [
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: Color(0x26FFFFFF),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(9),
+                child: Icon(Icons.hub_outlined, size: 26),
+              ),
+            ),
+            SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Hub Redes',
+                    style: TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Text(
+                    'Projetos e recursos integrados',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xCCFFFFFF),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.exit_to_app),
-            onPressed: () {
-              // Confirma antes de sair
-              showDialog(
-                context: context,
-                builder: (context) => AlertDialog(
-                  title: const Text('Sair'),
-                  content: const Text('Deseja realmente sair do aplicativo?'),
-                  actions: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(context),
-                      child: const Text('Cancelar'),
-                    ),
-                    TextButton(
-                      onPressed: () => SystemNavigator.pop(),
-                      child: const Text('Sair'),
-                    ),
-                  ],
-                ),
-              );
-            },
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: IconButton.filledTonal(
+              tooltip: 'Sair do aplicativo',
+              style: IconButton.styleFrom(
+                backgroundColor: const Color(0x26FFFFFF),
+                foregroundColor: Colors.white,
+              ),
+              icon: const Icon(Icons.logout_rounded),
+              onPressed: () {
+                // Confirma antes de sair
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text('Sair'),
+                    content: const Text('Deseja realmente sair do aplicativo?'),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Cancelar'),
+                      ),
+                      TextButton(
+                        onPressed: () => SystemNavigator.pop(),
+                        child: const Text('Sair'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
