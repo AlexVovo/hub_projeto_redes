@@ -40,6 +40,14 @@ class HomeScreen extends StatelessWidget {
       color: Colors.purple,
     ),
     LinkModel(
+      title: 'Completude dos Dados RHC',
+      url: 'https://sisop-rs.web.app/#/dashboard-completude',
+      description: 'Dashboard de completude dos dados do Registro RHC',
+      category: 'Dashboard',
+      icon: Icons.fact_check,
+      color: Colors.indigo,
+    ),
+    LinkModel(
       title: 'Triagemoncoped',
       url: 'https://triagemoncopediatrica.ici.ong/',
       description: 'Plataforma de triagem oncológica pediátrica',
