@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                             const SizedBox(height: 16),
                                             Text(
-                                              'Conectar pessoas.\nFortalecer o cuidado.',
+                                              'Hub de acesso ao Drive do Projeto Redes',
                                               style: TextStyle(
                                                 color: hubInk,
                                                 fontSize: wide ? 38 : 28,
@@ -218,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                             const SizedBox(height: 16),
                                             const Text(
-                                              'Plataformas, conhecimento e dados a serviço da oncologia pediátrica.',
+                                              'Use a busca ou os filtros por categoria para encontrar o que precisa. Clique em um cartão para abrir a pasta no Drive ou acessar a plataforma correspondente.',
                                               style: TextStyle(
                                                 color: Color(0xFF445777),
                                                 fontSize: 16,
