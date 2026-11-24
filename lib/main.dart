@@ -13,8 +13,13 @@ class ProjetoRedesApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hub Redes',
-      theme: ThemeData(primarySwatch: Colors.blueGrey, fontFamily: 'Roboto'),
-      home: HomeScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFF4F6FC),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3458DB)),
+        fontFamily: 'Roboto',
+      ),
+      home: const HomeScreen(),
     );
   }
 }
