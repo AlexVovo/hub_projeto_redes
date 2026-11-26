@@ -14,17 +14,17 @@ void main() {
     await tester.pumpWidget(const ProjetoRedesApp());
     await tester.tap(find.widgetWithText(ChoiceChip, 'Registro'));
     await tester.pumpAndSettle();
-    expect(find.text('2 de 11 recursos'), findsOneWidget);
+    expect(find.text('2 de 12 recursos'), findsOneWidget);
     await tester.enterText(find.byType(TextField), 'teleoncoped');
     await tester.pumpAndSettle();
-    expect(find.text('1 de 11 recursos'), findsOneWidget);
+    expect(find.text('1 de 12 recursos'), findsOneWidget);
     expect(find.byType(LinkCard), findsOneWidget);
     await tester.enterText(find.byType(TextField), 'inexistente');
     await tester.pumpAndSettle();
     expect(find.text('Nenhum recurso encontrado.'), findsOneWidget);
     await tester.tap(find.byTooltip('Limpar busca'));
     await tester.pumpAndSettle();
-    expect(find.text('2 de 11 recursos'), findsOneWidget);
+    expect(find.text('2 de 12 recursos'), findsOneWidget);
   });
 
   testWidgets('Layout cabe em celular e com texto ampliado', (tester) async {

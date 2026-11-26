@@ -67,6 +67,15 @@ final List<LinkModel> hubLinks = [
     color: Colors.brown,
   ),
   LinkModel(
+    title: 'Manuais e Treinamentos',
+    url:
+        'https://drive.google.com/drive/folders/1bOaGR0AVVgKx7jTc1jHOoBVFW459UJW1',
+    description: 'Materiais de apoio, manuais e treinamentos',
+    category: 'Educação',
+    icon: Icons.menu_book,
+    color: Colors.teal,
+  ),
+  LinkModel(
     title: 'Indicadores Painel Oncoped',
     url: 'https://indicadorespaineloncoped.web.app/',
     description: 'Painel de indicadores oncológicos pediátricos',
